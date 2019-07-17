@@ -19,8 +19,25 @@ namespace AlllMVCApp.Controllers
         public ActionResult Add()
         {
             _student.ID = 1;
-            _student.Name = "Ziarul";
+            _student.Name = "Sultan";
             _studentManager.Add(_student);
+
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            _student.ID = 2;
+            _studentManager.Delete(_student);
+
+            return View();
+        }
+
+        public ActionResult Update()
+        {
+            _student.ID = 5;
+            _student.Name = "Rahim";
+            _studentManager.Update(_student);
 
             return View();
         }

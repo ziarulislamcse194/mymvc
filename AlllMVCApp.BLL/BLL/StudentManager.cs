@@ -16,5 +16,16 @@ namespace AlllMVCApp.BLL.BLL
         {
             return _studentRepository.Add(student);
         }
+
+        public bool Delete(Student student)
+        {
+            return _studentRepository.Delete(student);
+        }
+
+        public bool Update(Student student)
+        {
+            return _studentRepository.Update(student);
+        }
+
     }
 }
