@@ -27,5 +27,14 @@ namespace AlllMVCApp.BLL.BLL
             return _studentRepository.Update(student);
         }
 
+        public Student GetByID(Student student)
+        {
+            return _studentRepository.GetByID(student);
+        }
+
+        public List<Student> GetAll(Student student)
+        {
+            return _studentRepository.GetAll(student);
+        }
     }
 }

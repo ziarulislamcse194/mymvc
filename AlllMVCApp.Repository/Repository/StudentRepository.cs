@@ -57,8 +57,17 @@ namespace AlllMVCApp.Repository.Repository
             return false;
         }
 
+        public Student GetByID(Student student)
+        {
+            Student aStudent = db.Students.FirstOrDefault(c => c.ID == student.ID);
+            return aStudent;
 
+        }
 
+        public List<Student> GetAll(Student student)
+        {
+            return db.Students.ToList();
+        }
 
     }
 }

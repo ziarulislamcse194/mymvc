@@ -41,5 +41,21 @@ namespace AlllMVCApp.Controllers
 
             return View();
         }
+
+        public ActionResult GetByID()
+        {
+            _student.ID = 5;
+            Student bStudent = _studentManager.GetByID(_student);
+
+            return View();
+        }
+
+        public ActionResult GetAll()
+        {
+            _student.ID = 5;
+            List<Student> bStudent = _studentManager.GetAll(_student);
+
+            return View();
+        }
     }
 }
