@@ -35,9 +35,18 @@ namespace AlllMVCApp.Controllers
 
         public ActionResult Update()
         {
-            _student.ID = 5;
-            _student.Name = "Rahim";
-            _studentManager.Update(_student);
+            _student.ID = 2;
+            //Method 1
+            //_student.Name = "Rahim";
+            //_studentManager.Update(_student);
+            ////Method 2
+            Student aStudent = _studentManager.GetByID(_student);
+            if (aStudent != null)
+            {
+                aStudent.Name = "Kamal";
+                _studentManager.Update(aStudent);
+            }
+
 
             return View();
         }
